@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var data=[[String(i+"-"+0), String(i+"-"+1), String(i+"-"+2)]];
+        var data=[];
+        for(var i=2; i<10; i++) {
+            for(var j=1; j<10; j++){
+                data[i]=[String(i + " * " + j)];
+            } 
+        }
+        // for(var i=0; i<10;i++)
+        // {
+        //     data[i] = [String(i+"*"+1), String(i+"*"+2), String(i+"*"+3), String(i+"*"+4), String(i+"*"+5), String(i+"*"+6), String(i+"*"+7), String(i+"*"+8), String(i+"*"+9)]
+        // }
+
+        function printData(){
+            for(var x=2;x<data.length; x++) {
+                for(var y=0; y<data[x].length; y++) {
+                    document.write(data[x][y] + " = " + [x]*[y+1] + " ");
+                }
+                document.write("<p/>");
+            }
+            document.write("<a href='index.html'>돌아가기</a>");
+        }
+    </script>
+    <button type="button" onclick="printData()">전체 배열 데이터 보기</button>
+</body>
+</html>
+
+
+<!-- x<data.length -->
+    <!-- y<data[x].length -->
+
+        <!-- , String(" * "), String(j), String(" = ") -->
+        <!-- + " = "), (i*j) -->
